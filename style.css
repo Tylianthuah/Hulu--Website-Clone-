@@ -200,6 +200,7 @@ h3 {
 .categories .cover > div {
   height: 500px;
   width: 350px;
+  max-width: 100%;
   position: relative;
 }
 
@@ -240,7 +241,78 @@ h3 {
   background: url(/img/cover-4.jpg) no-repeat center center / cover;
 }
 
+/* Live-Section */
+
+.live {
+  background: #151516;
+  padding: 40px;
+}
+
+.live-border {
+  border: 4px solid #1ce783;
+  border-radius: 16px;
+  display: flex;
+  padding: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.live a {
+  text-decoration: underline;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* LIve-sports */
+.live-sports {
+  background: url(/img/live-sports.jpg) no-repeat center center / cover;
+  height: 800px;
+  position: relative;
+}
+
+.live-sports .sub-text {
+  text-align: left;
+}
+
+.live-sports-content {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  max-width: 550px;
+}
+
+.live-sports-logos {
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.live-sports-logos > div {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50px;
+}
+
+.live-sports-logos img {
+  width: 50px;
+}
 /* Media */
+
+@media (max-width: 1100px) {
+  .categories .cover {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     height: 480px;
@@ -289,5 +361,31 @@ h3 {
 
   .categories .cover {
     grid-template-columns: 1fr;
+  }
+
+  .categories .cover > div {
+    width: 300px;
+  }
+
+  .live-border {
+    padding: 30px 10px;
+  }
+
+  .live-sports {
+    background: url(/img/live-sports-small.jpg) no-repeat center center / cover;
+  }
+
+  .live-sports-content {
+    top: 30px;
+    left: 30px;
+    margin-top: 60px;
+  }
+
+  .live-sports .text-lg {
+    text-align: left;
+  }
+
+  .live-sports .legal-text {
+    margin-bottom: 30px;
   }
 }
